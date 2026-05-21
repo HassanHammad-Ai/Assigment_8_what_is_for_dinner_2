@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+    <link rel="icon" href="./images/favicon.webp" />
+    <!-- *====>Used Font -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Days+One&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- *====> Linking the all.min css file for font awesome -->
+    <link rel="stylesheet" href="./CSS/all.min.css" />
+    <!-- *====> linking css bootstrap file -->
+    <link rel="stylesheet" href="./CSS/bootstrap.min.css" />
+    <!-- *====> Linking the style css file -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <!-- *====> Media Query css file -->
+    <link rel="stylesheet" href="./CSS/media.css" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent">
+    <!-- & ############################################################ -->
+    <!-- & ########################## Navbar ########################## -->
+    <!-- & ############################################################ -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+      <div class="container p-2">
+        <div class="logo d-flex mb-sm-3 mb-lg-0">
+          <div
+            class="icon d-flex align-items-center justify-content-center me-3 rounded-circle"
+          >
+            <i class="fa-solid fa-utensils text-white fs-5"></i>
+          </div>
+          <div class="icon-content">
+            <h1 class="clarity h4 fw-bolder mb-0">What's For Dinner</h1>
+            <p class="grey-color mb-0">Your daily meal inspiration</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars border-0"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div
+            class="right-content d-lg-flex align-items-lg-center ms-auto gap-4 flex-column flex-lg-row"
+          >
+            <ul
+              class="icons list-unstyled d-lg-flex align-items-lg-center gap-4 mb-0"
+            >
+              <li class="mb-3 mb-lg-0 mt-3 mt-lg-0 cursor-pointer">
+                <i class="fa-solid fa-bookmark fs-5 me-2 me-lg-0"></i>
+                <span class="d-lg-none">Saved Recipes</span>
+              </li>
+              <li class="mb-3 mb-lg-0 cursor-pointer">
+                <i class="fa-solid fa-clock-rotate-left fs-5 me-2 me-lg-0"></i>
+                <span class="d-lg-none">Recent</span>
+              </li>
+              <li class="mb-3 mb-lg-0 cursor-pointer">
+                <i class="fa-solid fa-gear fs-5 me-2 me-lg-0"></i>
+                <span class="d-lg-none">Settings</span>
+              </li>
+            </ul>
+
+            <div class="image-wrapper cursor-pointer">
+              <img
+                src="./images/avatar-4.jpg"
+                alt="a hansome white man"
+                class="rounded-circle me-sm-2 me-lg-0"
+              />
+              <span class="d-lg-none">Profile</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ? ############################################################  -->
+    <!-- ? ########################## hero section style ##########################  -->
+    <!-- ? ############################################################  -->
+
+    <div class="hero" id="hero">
+      <div class="container">
+        <div class="content">
+          <div class="row g-0 rounded-4 shadow">
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~left content ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` -->
+            <div class="col-lg-5">
+              <div class="left-content position-relative">
+                <!-- image -->
+                <img
+                  src="./images/meal19.jpg"
+                  alt="an image of a potato salad"
+                  id="image"
+                />
+                <!-- reviews -->
+                <div
+                  class="reviews bg-white rounded-pill px-3 py-2 position-absolute"
+                >
+                  <div class="review d-flex align-items-center gap-2">
+                    <i
+                      class="fa-solid fa-star"
+                      style="color: oklch(0.852 0.199 91.936)"
+                    ></i>
+                    <span class="black-color fw-bold" id="ratingAverage"
+                      >4.7</span
+                    >
+                    <span class="grey-color" id="ratingQuantity"
+                      >(312 reviews)</span
+                    >
+                  </div>
+                </div>
+                <!-- details -->
+                <div class="details bg-white position-absolute p-4 rounded-4">
+                  <div
+                    class="more d-flex align-items-center gap-2 justify-content-evenly"
+                  >
+                    <!-- left -->
+                    <div
+                      class="left d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <i
+                        class="fa-solid fa-clock fs-4 mb-1"
+                        style="color: oklch(0.705 0.213 47.604)"
+                      ></i>
+                      <p class="grey-color mb-0">Prep Time</p>
+                      <p class="black-color mb-0 fw-bold" id="prepTime">
+                        15 min
+                      </p>
+                    </div>
+                    <!-- middle -->
+                    <div
+                      class="middle d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <i
+                        class="fa-solid fa-fire-burner fs-4 mb-1"
+                        style="color: rgb(245, 0, 0)"
+                      ></i>
+                      <p class="grey-color mb-0">Cook Time</p>
+                      <p class="black-color mb-0 fw-bold" id="cookTime">
+                        25 min
+                      </p>
+                    </div>
+                    <!-- right -->
+                    <div
+                      class="right d-flex flex-column align-items-center justify-content-center"
+                    >
+                      <i
+                        class="fa-solid fa-users fs-4 mb-1"
+                        style="color: oklch(0.623 0.214 259.815)"
+                      ></i>
+                      <p class="grey-color mb-0">Servings</p>
+                      <p class="black-color mb-0 fw-bold" id="servings">
+                        4 people
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of left content -->
+              </div>
+              <!-- end of column of left content -->
+            </div>
+
+            <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ right content~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="col-lg-7">
+              <div class="right-content overflow-auto bg-white">
+                <!-- top -->
+                <div
+                  class="top d-flex flex-column-reverse flex-md-row align-items-center justify-content-between g-5 mb-5"
+                >
+                  <!-- left -->
+                  <div class="left me-auto me-md-0">
+                    <div class="up d-flex align-items-center gap-3 mb-3">
+                      <span
+                        class="green rounded-pill py-1 px-3 green-color fw-bold"
+                        style="background-color: oklch(0.962 0.044 156.743)"
+                        id="level"
+                        >Intermediate</span
+                      >
+                      <span
+                        class="blue rounded-pill py-1 px-3 blue-color fw-bold"
+                        style="background-color: oklch(0.932 0.032 255.585)"
+                        id="category"
+                        >Asian</span
+                      >
+                    </div>
+                    <h3 class="fw-bold mb-2 black-color fs-1" id="name">
+                      Thai Green Curry
+                    </h3>
+                    <p class="grey-color fs-6 fw-bold" id="description">
+                      Vibrant and aromatic curry with vegetables and coconut
+                      milk
+                    </p>
+                    <!-- end of left -->
+                  </div>
+                  <!-- right -->
+                  <div
+                    class="right ms-auto ms-md-0 d-flex align-items-center justify-content-center gap-3"
+                  >
+                    <button
+                      class="bookmark border-0 rounded-2 d-flex align-items-center justify-content-center"
+                    >
+                      <i
+                        class="fa-solid fa-bookmark"
+                        style="color: rgb(245, 0, 0)"
+                      ></i>
+                    </button>
+                    <button
+                      class="share border-0 rounded-2 d-flex align-items-center justify-content-center"
+                    >
+                      <i
+                        class="fa-solid fa-share-nodes"
+                        style="color: rgb(245, 0, 0)"
+                      ></i>
+                    </button>
+                    <!-- end of right -->
+                  </div>
+                  <!-- end of top -->
+                </div>
+                <!-- alert message -->
+                <div
+                  class="warning d-flex align-items-center gap-3 rounded-2 p-3 mb-4 d-none"
+                  id="warning"
+                  style="
+                    background-color: oklch(0.971 0.013 17.38);
+                    border-left: 4px solid oklch(0.637 0.237 25.331);
+                  "
+                >
+                  <i
+                    class="fa-solid fa-triangle-exclamation fs-5"
+                    style="color: rgb(245, 0, 0)"
+                  ></i>
+                  <div class="warning-details">
+                    <p
+                      class="m-0 fw-bold"
+                      style="color: oklch(0.444 0.177 26.899)"
+                    >
+                      Extended Preparation Time
+                    </p>
+                    <p style="color: oklch(0.577 0.245 27.325)">
+                      This recipe requires more than 45 minutes to prepare. Plan
+                      accordingly!
+                    </p>
+                  </div>
+                </div>
+                <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! main content !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                <div class="main-content">
+                  <ul
+                    class="nav nav-pills mb-5 justify-content-between grey-color"
+                    id="pills-tab"
+                    role="tablist"
+                  >
+                    <!-- first button -->
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link active"
+                        id="pills-Ingredients-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Ingredients"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Ingredients"
+                        aria-selected="true"
+                      >
+                        <i class="fa-solid fa-list-check"></i> Ingredients
+                      </button>
+                    </li>
+                    <!-- second button -->
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-Instructions-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Instructions"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Instructions"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid fa-book-open"></i> Instructions
+                      </button>
+                    </li>
+                    <!-- third button -->
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-Nutrition-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Nutrition"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Nutrition"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid fa-chart-pie"></i> Nutrition
+                      </button>
+                    </li>
+                    <!-- fourth button -->
+                    <li class="nav-item" role="presentation">
+                      <button
+                        class="nav-link"
+                        id="pills-Chef-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Chef"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Chef"
+                        aria-selected="false"
+                      >
+                        <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+                      </button>
+                    </li>
+                  </ul>
+                  <!-- ! content of each button -->
+
+                  <div
+                    class="tab-content pb-4"
+                    id="pills-tabContent"
+                    style="border-bottom: 2px solid #dee2e6"
+                  >
+                    <!-- content of first button -->
+                    <div
+                      class="tab-pane fade show active"
+                      id="pills-Ingredients"
+                      role="tabpanel"
+                      aria-labelledby="pills-Ingredients-tab"
+                      tabindex="0"
+                    >
+                      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                      <div class="Ingredients p-4 rounded-4 overflow-y-auto">
+                        <ul
+                          class="d-flex flex-column gap-3 list-unstyled"
+                          id="ingredients"
+                        >
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              1
+                            </div>
+                            <span>2 tablespoons green curry paste</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              2
+                            </div>
+                            <span>400ml coconut milk</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              3
+                            </div>
+                            <span>300g chicken breast, sliced</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              4
+                            </div>
+                            <span>1 red bell pepper, sliced</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              5
+                            </div>
+                            <span>100g green beans</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              6
+                            </div>
+                            <span>1 eggplant, cubed</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              7
+                            </div>
+                            <span>2 tablespoons fish sauce</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              8
+                            </div>
+                            <span>1 tablespoon palm sugar</span>
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-circle d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1"
+                            >
+                              9
+                            </div>
+                            <span>Fresh Thai basil leaves</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                      <!-- end of content of first button -->
+                    </div>
+                    <!-- content of second button -->
+                    <div
+                      class="tab-pane fade"
+                      id="pills-Instructions"
+                      role="tabpanel"
+                      aria-labelledby="pills-Instructions-tab"
+                      tabindex="0"
+                    >
+                      <div class="Instructions overflow-y-auto">
+                        <ul
+                          class="d-flex flex-column gap-3 list-unstyled"
+                          id="instructions"
+                        >
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-4 d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1 fs-5 white-space-nowrap flex-shrink-0"
+                            >
+                              1
+                            </div>
+                            <span
+                              >Heat a large pot or wok over medium heat. Add
+                              curry paste and cook for 1 minute until
+                              fragrant.</span
+                            >
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-4 d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1 fs-5 flex-shrink-0"
+                            >
+                              2
+                            </div>
+                            <span
+                              >Add half the coconut milk and stir to combine
+                              with the curry paste.</span
+                            >
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-4 d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1 fs-5 flex-shrink-0"
+                            >
+                              3
+                            </div>
+                            <span
+                              >Add sliced chicken and cook until no longer pink,
+                              about 5 minutes.</span
+                            >
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-4 d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1 fs-5 flex-shrink-0"
+                            >
+                              4
+                            </div>
+                            <span
+                              >Add remaining coconut milk, vegetables, fish
+                              sauce, and palm sugar.</span
+                            >
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-4 d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1 fs-5 flex-shrink-0"
+                            >
+                              5
+                            </div>
+                            <span
+                              >Simmer for 15-20 minutes until vegetables are
+                              tender and sauce has thickened.</span
+                            >
+                          </li>
+                          <li class="d-flex align-items-center gap-2">
+                            <div
+                              class="number rounded-4 d-flex align-items-center justify-content-center text-white fw-bold me-2 mt-1 fs-5 flex-shrink-0"
+                            >
+                              6
+                            </div>
+                            <span
+                              >Stir in fresh Thai basil leaves. Serve hot with
+                              jasmine rice.</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- end of content of second button -->
+                    </div>
+                    <!-- content of third button -->
+                    <div
+                      class="tab-pane fade"
+                      id="pills-Nutrition"
+                      role="tabpanel"
+                      aria-labelledby="pills-Nutrition-tab"
+                      tabindex="0"
+                    >
+                      <div class="nutrition">
+                        <div class="row g-3">
+                          <!-- calories -->
+                          <div class="col-md-6 col-12">
+                            <div
+                              class="calories d-flex align-items-center justify-content-between p-3 rounded-2"
+                            >
+                              <div class="left d-flex align-items-center">
+                                <div
+                                  class="icon me-2 rounded-2 d-flex align-items-center justify-content-center"
+                                  style="
+                                    width: 40px;
+                                    height: 40px;
+                                    background-color: oklch(0.954 0.038 75.164);
+                                  "
+                                >
+                                  <i
+                                    class="fa-solid fa-fire"
+                                    style="color: oklch(0.646 0.222 41.116)"
+                                  ></i>
+                                </div>
+                                <span>Calories</span>
+                              </div>
+                              <span
+                                class="fw-bold black-color fs-5"
+                                id="calories"
+                                >420 kcal</span
+                              >
+                            </div>
+                          </div>
+                          <!-- protien -->
+                          <div class="col-md-6 col-12">
+                            <div
+                              class="protien d-flex align-items-center justify-content-between p-3 rounded-2"
+                            >
+                              <div class="left d-flex align-items-center">
+                                <div
+                                  class="icon me-2 rounded-2 d-flex align-items-center justify-content-center"
+                                  style="
+                                    width: 40px;
+                                    height: 40px;
+                                    background-color: oklch(
+                                      0.932 0.032 255.585
+                                    );
+                                  "
+                                >
+                                  <i
+                                    class="fa-solid fa-dumbbell"
+                                    style="color: oklch(0.546 0.245 262.881)"
+                                  ></i>
+                                </div>
+                                <span>Protein</span>
+                              </div>
+                              <span
+                                class="fw-bold black-color fs-5"
+                                id="protien"
+                                >26g</span
+                              >
+                            </div>
+                          </div>
+                          <!-- carbohydrates -->
+                          <div class="col-md-6 col-12">
+                            <div
+                              class="carbohydrates d-flex align-items-center justify-content-between p-3 rounded-2"
+                            >
+                              <div class="left d-flex align-items-center">
+                                <div
+                                  class="icon me-2 rounded-2 d-flex align-items-center justify-content-center"
+                                  style="
+                                    width: 40px;
+                                    height: 40px;
+                                    background-color: oklch(
+                                      0.973 0.071 103.193
+                                    );
+                                  "
+                                >
+                                  <i
+                                    class="fa-solid fa-wheat-awn"
+                                    style="color: oklch(0.681 0.162 75.834)"
+                                  ></i>
+                                </div>
+                                <span>Carbohydrates</span>
+                              </div>
+                              <span
+                                class="fw-bold black-color fs-5"
+                                id="carbohydrates"
+                                >22g</span
+                              >
+                            </div>
+                          </div>
+                          <!-- fat -->
+                          <div class="col-md-6 col-12">
+                            <div
+                              class="fat d-flex align-items-center justify-content-between p-3 rounded-2"
+                            >
+                              <div class="left d-flex align-items-center">
+                                <div
+                                  class="icon me-2 rounded-2 d-flex align-items-center justify-content-center"
+                                  style="
+                                    width: 40px;
+                                    height: 40px;
+                                    background-color: oklch(0.936 0.032 17.717);
+                                  "
+                                >
+                                  <i
+                                    class="fa-solid fa-droplet"
+                                    style="color: oklch(0.577 0.245 27.325)"
+                                  ></i>
+                                </div>
+                                <span>Fat</span>
+                              </div>
+                              <span class="fw-bold black-color fs-5" id="fat"
+                                >26g</span
+                              >
+                            </div>
+                          </div>
+                          <!-- fiber -->
+                          <div class="col-md-6 col-12">
+                            <div
+                              class="fiber d-flex align-items-center justify-content-between p-3 rounded-2"
+                            >
+                              <div class="left d-flex align-items-center">
+                                <div
+                                  class="icon me-2 rounded-2 d-flex align-items-center justify-content-center"
+                                  style="
+                                    width: 40px;
+                                    height: 40px;
+                                    background-color: oklch(
+                                      0.962 0.044 156.743
+                                    );
+                                  "
+                                >
+                                  <i
+                                    class="fa-solid fa-seedling"
+                                    style="color: oklch(0.627 0.194 149.214)"
+                                  ></i>
+                                </div>
+                                <span>Fiber</span>
+                              </div>
+                              <span class="fw-bold black-color fs-5" id="fiber"
+                                >5g</span
+                              >
+                            </div>
+                          </div>
+                          <!-- sodium -->
+                          <div class="col-md-6 col-12">
+                            <div
+                              class="sodium d-flex align-items-center justify-content-between p-3 rounded-2"
+                            >
+                              <div class="left d-flex align-items-center">
+                                <div
+                                  class="icon me-2 rounded-2 d-flex align-items-center justify-content-center"
+                                  style="
+                                    width: 40px;
+                                    height: 40px;
+                                    background-color: oklch(
+                                      0.948 0.028 342.258
+                                    );
+                                  "
+                                >
+                                  <i
+                                    class="fa-solid fa-cube"
+                                    style="color: oklch(0.592 0.249 0.584)"
+                                  ></i>
+                                </div>
+                                <span>Sodium</span>
+                              </div>
+                              <span class="fw-bold black-color fs-5" id="sodium"
+                                >890mg</span
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of third button content -->
+                    </div>
+                    <!-- content of fourth button -->
+                    <div
+                      class="tab-pane fade"
+                      id="pills-Chef"
+                      role="tabpanel"
+                      aria-labelledby="pills-Chef-tab"
+                      tabindex="0"
+                    >
+                      <div class="chef overflow-y-auto overflow-x-hidden">
+                        <div class="row g-3" id="chefTips">
+                          <!-- first -->
+                          <div class="col-12">
+                            <div
+                              class="horizontal first-row rounded-4 p-3 d-flex align-items-center gap-3"
+                            >
+                              <div
+                                class="icon rounded-circle d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: oklch(0.666 0.179 58.318);
+                                "
+                              >
+                                <i
+                                  class="fa-solid fa-check text-white fs-6"
+                                ></i>
+                              </div>
+                              <p style="color: oklch(0.373 0.034 259.733)">
+                                Adjust spice level by using more or less curry
+                                paste
+                              </p>
+                            </div>
+                          </div>
+                          <!-- second -->
+                          <div class="col-12">
+                            <div
+                              class="horizontal rounded-4 p-3 d-flex align-items-center gap-3"
+                            >
+                              <div
+                                class="icon rounded-circle d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: oklch(0.666 0.179 58.318);
+                                "
+                              >
+                                <i
+                                  class="fa-solid fa-check text-white fs-6"
+                                ></i>
+                              </div>
+                              <p style="color: oklch(0.373 0.034 259.733)">
+                                Add vegetables in stages based on cooking time
+                                needed
+                              </p>
+                            </div>
+                          </div>
+                          <!-- third -->
+                          <div class="col-12">
+                            <div
+                              class="horizontal first-row rounded-4 p-3 d-flex align-items-center gap-3"
+                            >
+                              <div
+                                class="icon rounded-circle d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: oklch(0.666 0.179 58.318);
+                                "
+                              >
+                                <i
+                                  class="fa-solid fa-check text-white fs-6"
+                                ></i>
+                              </div>
+                              <p style="color: oklch(0.373 0.034 259.733)">
+                                Fresh Thai basil is essential for authentic
+                                flavor
+                              </p>
+                            </div>
+                          </div>
+                          <!-- fourth -->
+                          <div class="col-12">
+                            <div
+                              class="horizontal first-row rounded-4 p-3 d-flex align-items-center gap-3"
+                            >
+                              <div
+                                class="icon rounded-circle d-flex align-items-center justify-content-center"
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: oklch(0.666 0.179 58.318);
+                                "
+                              >
+                                <i
+                                  class="fa-solid fa-check text-white fs-6"
+                                ></i>
+                              </div>
+                              <p style="color: oklch(0.373 0.034 259.733)">
+                                Use full-fat coconut milk for richest, creamiest
+                                sauce
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end of fourth button content -->
+                    </div>
+                  </div>
+                  <!-- end of main content -->
+                </div>
+                <!-- !!!!!!!!!button!!!!!!!!!!! -->
+                <div class="refresh-button d-flex align-items-center pt-4 mt-4">
+                  <button
+                    class="text-white border-0 py-3 px-4 rounded-4 fw-bold"
+                    type="button"
+                    onclick="anotherMeal()"
+                  >
+                    <i class="fa-solid fa-arrows-rotate me-2"></i>
+                    Try Another Recipe
+                  </button>
+                </div>
+                <!-- end of right content -->
+              </div>
+              <!-- end of col of right content -->
+            </div>
+            <!-- end of row -->
+          </div>
+          <!-- end of content  -->
+        </div>
+        <!-- end of container -->
+      </div>
+      <!-- end of hero -->
+    </div>
+
+    <!-- *====> linking the js bootstrap file -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- *====> linking the js index file -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>

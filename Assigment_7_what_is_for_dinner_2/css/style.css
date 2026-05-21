@@ -1,0 +1,287 @@
+/* *====> Global Styles */
+:root {
+  --green-color: oklch(0.527 0.154 150.069);
+  --blue-color: oklch(0.488 0.243 264.376);
+  --black-color: oklch(0.21 0.034 264.665);
+  --orange-color: oklch(0.646 0.222 41.116);
+  --grey-color: oklch(0.551 0.027 264.364);
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-image: linear-gradient(
+    to right bottom,
+    oklch(0.98 0.016 73.684) 0%,
+    oklch(0.987 0.022 95.277) 50%,
+    oklch(0.987 0.026 102.212) 100%
+  );
+
+  background-color: rgb(255, 255, 255);
+}
+
+html {
+  scroll-padding-top: 55px;
+}
+
+a {
+  color: inherit;
+}
+
+span,
+a {
+  display: inline-block;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+.orange-color {
+  color: var(--orange-color);
+}
+
+.green-color {
+  color: var(--green-color);
+}
+
+.black-color {
+  color: var(--black-color);
+}
+
+.blue-color {
+  color: var(--blue-color);
+}
+
+.grey-color {
+  color: var(--grey-color);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* & ############################################################ */
+/* & ########################## Navbar section style ########################## */
+/* & ############################################################ */
+.navbar {
+  border-bottom: 2.5px solid oklch(0.954 0.038 75.164);
+}
+
+.navbar .logo .icon {
+  width: 48px;
+  height: 48px;
+  background-image: linear-gradient(
+    to right bottom,
+    oklch(0.705 0.213 47.604) 0%,
+    oklch(0.637 0.237 25.331) 100%
+  );
+}
+
+.navbar .right-content .icons li,
+.navbar .right-content .image-wrapper {
+  transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  color: oklch(0.446 0.03 256.802);
+}
+
+.navbar .right-content .image-wrapper img {
+  width: 40px;
+  height: 40px;
+  border: 1.6px solid oklch(0.837 0.128 66.29);
+}
+.navbar .right-content .icons li:hover,
+.navbar .right-content .image-wrapper:hover {
+  color: var(--orange-color);
+}
+
+/* ? ############################################################ */
+/* ? ########################## hero section style ########################## */
+/* ? ############################################################ */
+.hero {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.hero .left-content img {
+  width: clamp(40px, 100%, 970px);
+  height: 400px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.hero .left-content .reviews {
+  top: 24px;
+  left: 24px;
+}
+
+.hero .left-content .details {
+  right: 24px;
+  left: 24px;
+  bottom: 24px;
+}
+
+/* 1. Target the element container and enable scrolling */
+.hero .right-content {
+  padding: clamp(20px, 3vw, 40px);
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: oklch(0.75 0.15 35 / 0.3) rgba(0, 0, 0, 0); /* For Firefox (Thumb, Track) */
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 750px;
+}
+
+/* 2. Custom scrollbar for Chrome, Safari, and Edge */
+.hero .right-content::-webkit-scrollbar {
+  width: 6px; /* Makes the scrollbar thin */
+}
+
+/* The background track */
+.hero .right-content::-webkit-scrollbar-track {
+  background: transparent; /* Kept transparent like the image */
+}
+
+/* The draggable scrollbar handle */
+.hero .right-content::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; /* Match the gray color in your image */
+  border-radius: 10px; /* Gives it the rounded, capsule shape */
+}
+
+/* Hover effect */
+.hero .right-content::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8; /* Slightly darker on hover */
+}
+
+.hero .right-content .top .bookmark,
+.hero .right-content .top .share {
+  background-color: oklch(0.954 0.038 75.164);
+  height: 48px;
+  width: 48px;
+  transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero .right-content .top .bookmark:hover,
+.hero .right-content .top .share:hover {
+  background-color: #ffd6a7;
+}
+
+/* Container styling to create the bottom grey line */
+#pills-tab {
+  border-bottom: 2px solid #dee2e6; /* The light grey line */
+  gap: 20px; /* Space between buttons */
+}
+
+/* Base button styling */
+.nav-pills .nav-link {
+  border-radius: 0; /* Make them flat, not rounded */
+  background: none !important; /* Remove background color */
+  color: var(--more-grey-color) !important; /* Default grey text */
+  border-bottom: 3px solid transparent; /* Hidden border for spacing */
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+  color: var(--orange-color) !important;
+  border-bottom: 3px solid #fd7e14;
+}
+
+/* Active button styling */
+.nav-pills .nav-link.active {
+  color: #fd7e14 !important; /* Orange text */
+  border-bottom: 3px solid #fd7e14; /* Orange underline */
+}
+
+.hero .right-content .Ingredients {
+  background-image: linear-gradient(
+    to right bottom,
+    oklch(0.98 0.016 73.684) 0%,
+    oklch(0.987 0.022 95.277) 100%
+  );
+  height: 378px;
+  scrollbar-color: oklch(0.75 0.15 35 / 0.3) rgba(0, 0, 0, 0);
+}
+
+.hero .right-content .Ingredients ul li .number {
+  background-color: oklch(0.705 0.213 47.604);
+  height: 24px;
+  width: 24px;
+}
+
+.hero .right-content .Ingredients ul li span {
+  color: oklch(0.373 0.034 259.733);
+}
+
+.hero .right-content .Instructions {
+  height: 378px;
+  scrollbar-color: oklch(0.75 0.15 35 / 0.3) rgba(0, 0, 0, 0);
+}
+
+.hero .right-content .Instructions ul li .number {
+  background-color: oklch(0.705 0.213 47.604);
+  height: 48px;
+  width: 48px;
+}
+
+.hero .right-content .Instructions ul li span {
+  color: oklch(0.373 0.034 259.733);
+}
+
+.hero .right-content .nutrition .calories,
+.hero .right-content .nutrition .protien,
+.hero .right-content .nutrition .carbohydrates,
+.hero .right-content .nutrition .fat,
+.hero .right-content .nutrition .fiber,
+.hero .right-content .nutrition .sodium {
+  background-color: oklch(0.985 0.002 247.839);
+}
+
+.hero .right-content .chef {
+  height: 350px;
+  scrollbar-color: oklch(0.75 0.15 35 / 0.3) rgba(0, 0, 0, 0);
+}
+
+.hero .right-content .chef .horizontal {
+  border-left: 5px solid oklch(0.828 0.189 84.429);
+  background-color: oklch(0.987 0.022 95.277);
+}
+
+.hero .right-content .refresh-button button {
+  background-image: linear-gradient(
+    to right,
+    oklch(0.705 0.213 47.604) 0%,
+    oklch(0.637 0.237 25.331) 100%
+  );
+
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero .right-content .refresh-button button:hover {
+  transform: scale(1.1);
+  background-image: linear-gradient(to right, #ea580c, #ef4444);
+}
